@@ -1,0 +1,20 @@
+#p-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #p-not-found h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  #p-not-found img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }

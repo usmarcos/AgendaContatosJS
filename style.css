@@ -1,0 +1,82 @@
+@import url(./style/pages/login.page.css);
+@import url(./style/pages/signup.page.css);
+@import url(./style/pages/404.page.css);
+
+/* Definindo variáveis para reutilizar cores e fontes */
+:root {
+  --primary-color: blueviolet;
+  --secondary-color: #202020;
+  --alert-color: #ffaaaa;
+  --alert-text-color: #ff0000;
+  --font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0 16px;
+  font-family: var(--font-family);
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input:not(input[type="radio"]):not(input[type="checkbox"]),
+button {
+  min-height: 40px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--secondary-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background-color: lightblue;
+}
+
+label {
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+#imgLogin img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -190px;
+}
+
+a {
+  font-size: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.2rem;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.alerta {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  transform: translate(0, -50%);
+  background-color: var(--alert-color);
+  color: var(--alert-text-color);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  max-width: 200px;
+  text-align: center;
+}

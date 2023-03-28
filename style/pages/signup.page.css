@@ -1,0 +1,27 @@
+#p-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+#p-signup fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#p-signup input[type="radio"],
+input[type="checkbox"] {
+  margin-left: 0;
+  margin-right: 10px;
+}
+#p-signup input:not(input[type="radio"]):not(input[type="checkbox"]),
+#p-signup button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
