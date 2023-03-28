@@ -22,8 +22,13 @@ const eventos = () => {
                 }
             })
             .catch((erro) => {
-                console.log(erro)
-                validationMessage(erro)
+                console.log(erro)                
+                if(erro.status === 404){
+                    validationMessage(erro)
+                }else{
+                    erro.mensagem = "Não foi possível realizar uma conexão com o servidor."
+                    validationMessage(erro)
+                }
             })
     })
 }
