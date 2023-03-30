@@ -1,0 +1,42 @@
+#c-header {
+  display: flex;
+  background-color: blueviolet;
+  background-image: linear-gradient(to bottom, blueviolet, indigo);
+  color: white;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  gap: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#c-header a {
+  color: white;
+}
+
+#c-header a:hover {
+  color: lightgray;
+}
+
+#c-header a:last-child {
+  background-color: white;
+  color: blueviolet;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#c-header a:last-child:hover {
+  background-color: blueviolet;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}

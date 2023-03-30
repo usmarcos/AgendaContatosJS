@@ -1,18 +1,20 @@
 @import url(./style/pages/login.page.css);
 @import url(./style/pages/signup.page.css);
 @import url(./style/pages/404.page.css);
+@import url(./style/pages/contacts.page.css);
+@import url(./style/pages/contact-details.page.css);
+@import url(./style/components/header.components.css);
+
 
 /* Definindo variáveis para reutilizar cores e fontes */
 :root {
   --primary-color: blueviolet;
   --secondary-color: #202020;
-  --alert-color: #ffaaaa;
-  --alert-text-color: #ff0000;
   --font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  margin: 0;
+  margin: 80px 0 0;
   padding: 0 16px;
   font-family: var(--font-family);
   background-color: var(--secondary-color);
@@ -71,8 +73,8 @@ a:hover {
   top: 5%;
   right: 5%;
   transform: translate(0, -50%);
-  background-color: var(--alert-color);
-  color: var(--alert-text-color);
+  background-color: #ffaaaa;
+  color: #ff0000;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -81,4 +83,10 @@ a:hover {
   text-align: center;
   display: inline-block;
   width: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

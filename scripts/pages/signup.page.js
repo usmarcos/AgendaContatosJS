@@ -12,22 +12,26 @@ const eventos = () => {
         //chamo o service para realizar a autenticação, como o fetch retorna promisse eu trato abaixo
         signupService(dados)
             .then((response) => {
-                console.log(response)
+                console.log(response)                
                 //apesar de não ser 200 ele cai como then, então estou tratando
                 if (response.status === 409) {
-                    validationMessage(response)
+                    validationMessage(response, false)
                 }
                 if (response.status === 200) {
-                    window.location.href = "#login"
+                    response.mensagem = "Usuário cadastrado com sucesso!"
+                    validationMessage(response, true)
+                    setTimeout(() => {
+                        window.location.href = "#login"
+                      }, 3000)
                 }
             })
-            .catch((erro) => {
+            .catch((erro) => {         
                 console.log(erro)                
                 if(erro.status === 404){
-                    validationMessage(erro)
+                    validationMessage(erro, false)
                 }else{
                     erro.mensagem = "Não foi possível realizar uma conexão com o servidor."
-                    validationMessage(erro)
+                    validationMessage(erro, false)
                 }
             })
     })
@@ -55,16 +59,19 @@ export const Signup = () => {
     return signup
 }
 
-function validationMessage(retorno) {
-    const mensagem = retorno.mensagem;
-
-    const alerta = document.createElement('div');
-    alerta.textContent = mensagem;
-    alerta.classList.add('alerta');
-
-    signup.appendChild(alerta);
+function validationMessage(retorno, status) {
+    const mensagem = retorno.mensagem
+    const alerta = document.createElement('div')
+    alerta.textContent = mensagem
+    alerta.classList.add('alerta')
+    //se for falso ele vai setar um fundo verde de sucesso
+    if(status){
+        alerta.style.backgroundColor = 'green'
+        alerta.style.color = '#ffffff'
+    }
+    signup.appendChild(alerta)
 
     setTimeout(() => {
-        alerta.remove();
-    }, 5000);
+        alerta.remove()
+    }, 5000)
 }

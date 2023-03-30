@@ -14,19 +14,28 @@ const eventos = () => {
             .then((response) => {
                 console.log(response)
                 if (response.status === 401) {
-                    validationMessage(response)
+                    validationMessage(response, false)
                 }
                 if (response.status === 200) {
-                    //implementar
+                    //desestruturo o response para poder obter o user e armazenar no localstorage
+                    const { token, ...dadosUsuario } = response.data
+                    sessionStorage.setItem('@token', token)
+                    //converto ele para string e poder armazenar como string no banco local
+                    window.sessionStorage.setItem('@user', JSON.stringify(dadosUsuario))
+                    response.mensagem = "Login validado, você está sendo redirecionado..."
+                    validationMessage(response, true)
+                    setTimeout(() => {
+                        window.location.href = '#contacts'
+                      }, 3000)                 
                 }
             })
             .catch((erro) => {
                 console.log(erro)                
                 if(erro.status === 404){
-                    validationMessage(erro)
+                    validationMessage(erro, false)
                 }else{
                     erro.mensagem = "Não foi possível realizar uma conexão com o servidor."
-                    validationMessage(erro)
+                    validationMessage(erro, false)
                 }
             })
     })
@@ -59,16 +68,19 @@ export const Login = () => {
     return login
 }
 
-function validationMessage(retorno) {
-    const mensagem = retorno.mensagem;
-
-    const alerta = document.createElement('div');
-    alerta.textContent = mensagem;
-    alerta.classList.add('alerta');
-
-    login.appendChild(alerta);
+function validationMessage(retorno, status) {
+    const mensagem = retorno.mensagem
+    const alerta = document.createElement('div')
+    alerta.textContent = mensagem
+    alerta.classList.add('alerta')
+    //se for true ele vai setar um fundo verde de sucesso
+    if(status){
+        alerta.style.backgroundColor = 'green'
+        alerta.style.color = '#ffffff'
+    }
+    login.appendChild(alerta)
 
     setTimeout(() => {
-        alerta.remove();
-    }, 5000);
+        alerta.remove()
+    }, 5000)
 }
