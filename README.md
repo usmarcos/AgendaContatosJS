@@ -18,4 +18,5 @@
 ![2023-04-02_13h36_47](https://user-images.githubusercontent.com/67884162/229366460-6efd313e-1d2d-4579-b133-7242c8bab5d9.gif)
 
 ## Delete contact
-![2023-04-02_13h38_06](https://user-images.githubusercontent.com/67884162/229366548-eeccfa68-08d1-4950-9cdb-11d70ef6be8c.gif)
+![2023-04-02_13h43_55](https://user-images.githubusercontent.com/67884162/229366851-386e28d5-e0fe-4c93-9498-3d35a2e31370.gif)
+
