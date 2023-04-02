@@ -71,7 +71,7 @@ a:hover {
 
 .alerta {
   position: fixed;
-  top: 7.5%;
+  top: 9%;
   right: 5%;
   transform: translate(0, -50%);
   background-color: #ffaaaa;
