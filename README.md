@@ -1,6 +1,6 @@
 # AgendaContatosJS
-<a href="https://github.com/dkayke-aulas/agenda-contatos-backend">A agenda é baseada neste backend</a>
-<p>Projeto com o objetivo de criar uma agenda de contatos com javascript</p>
+<a href="https://github.com/dkayke-aulas/agenda-contatos-backend">Backend</a>
+<p>Creating a contact agenda using JavaScript.</p>
 
 # Working example
 <p>Some examples have repeated names such as 'email' because it was used as a forced test in the backend via Postman to validate the application's behavior.</p>
