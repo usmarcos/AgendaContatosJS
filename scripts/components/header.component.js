@@ -14,7 +14,7 @@ export const Header = () => {
     const usuario = JSON.parse(sessionStorage.getItem('@user'))
     // ? optional chaining, acessando uma propriedade que talvez não exista, daí não gera erro se ele tiver underfined
     header.innerHTML = `
-        <span>Usuário: ${usuario?.nome}</span>
+        <span><b>Usuário</b>: <i>${usuario?.nome}</i></span>
         <a href = "#login">Sair</a>
     `
     eventos()

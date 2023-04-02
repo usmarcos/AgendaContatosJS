@@ -32,10 +32,12 @@
   border-radius: 5px;
   text-decoration: none;
   transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 5px 20px;
 }
 
 #c-header a:last-child:hover {
-  background-color: blueviolet;
+  background-color: red;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);

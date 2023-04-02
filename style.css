@@ -4,6 +4,7 @@
 @import url(./style/pages/contacts.page.css);
 @import url(./style/pages/contact-details.page.css);
 @import url(./style/components/header.components.css);
+@import url(./style/pages/add-contact.page.css);
 
 
 /* Definindo variáveis para reutilizar cores e fontes */
@@ -70,7 +71,7 @@ a:hover {
 
 .alerta {
   position: fixed;
-  top: 5%;
+  top: 7.5%;
   right: 5%;
   transform: translate(0, -50%);
   background-color: #ffaaaa;

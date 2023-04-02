@@ -1,21 +1,87 @@
-.c-card-contact {
-    display: flex;
-    justify-content: space-between;
-    background-color: blueviolet;
-    color: white;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    border-radius: 10px;
-  }
-  
-  .c-card-contact:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .c-card-contact a {
-    color: white;
-  }
-  
+#c-card-contact {
+  display: flex;
+  justify-content: space-between;
+  background-color: blueviolet;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+#c-card-contact:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#c-card-contact a {
+  color: white;
+}
+
+#c-adicionar a {
+  color: white;
+  margin-top: 10px;
+}
+#c-adicionar {
+  display: flex;
+  align-items: center;
+}
+
+#c-adicionar a:hover {
+  color: lightgray;
+}
+
+#c-adicionar a:last-child {
+  background-color: white;
+  color: blueviolet;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#c-adicionar a:last-child:hover {
+  background-color: blueviolet;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#c-titulo {
+  display: flex;
+  justify-content: space-between;
+}
+#c-opcoes {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+a#c-deletar, a#c-visualizar {
+  display: inline;
+  background-color: white;
+  color: blueviolet;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+a#c-deletar:hover {
+  background-color: red;
+  color: white;
+}
+
+a#c-visualizar:hover{
+  background-color: blue;
+  color: white;
+}
+
+#c-p {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Segoe UI", sans-serif;
+}

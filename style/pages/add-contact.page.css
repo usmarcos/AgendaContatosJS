@@ -1,0 +1,75 @@
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea {
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--secondary-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="phone"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+select {
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--secondary-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#cadastrar[type="submit"] {
+  margin-top: 20px;
+  min-height: 40px;
+  padding: 5px 100px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: blueviolet;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 14px;
+  cursor: pointer;
+}
+
+#cadastrar[type="submit"]:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+form {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+}
